@@ -1,0 +1,9 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "newsletter-supabase-express"
+main = "src/index.ts"
+compatibility_date = "2024-08-21"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+SUPABASE_URL = "https://vunbqmjduacwihwdblvw.supabase.co"
+SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ1bmJxbWpkdWFjd2lod2RibHZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjA0MTEwMTEsImV4cCI6MjAzNTk4NzAxMX0.DQzhqTZ-ZPNYTjFWW-bW-s7a7nlSh0uCVaPxV_aWx0A"
