@@ -69,7 +69,7 @@ export default {
       const entryId = pathParts[2];
       const { data, error } = await supabase
         .from('entrykeywords')
-        .select('keyword_id, Keywords!inner(keyword, label_en, label_es)')
+        .select('keyword_id, keywords!inner(keyword, label_en, label_es)')
         .eq('entry_id', entryId);
 
       if (error) {
