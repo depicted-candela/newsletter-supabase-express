@@ -30,7 +30,7 @@ export default {
     // Endpoint to fetch all entries
     if (pathname === "/api/entries") {
       const { data, error } = await supabase
-        .from('Entries')
+        .from('entries')
         .select('id, entry_en, entry_es, layout(css_file_name)');
 
       if (error) {
@@ -46,7 +46,7 @@ export default {
     if (pathParts[0] === "api" && pathParts[1] === "entries" && pathParts[3] === "css") {
       const entryId = pathParts[2];
       const { data, error } = await supabase
-        .from('Entries')
+        .from('entries')
         .select('id, entry_en, entry_es, layout(css_file_name)')
         .eq('id', entryId)
         .single();
@@ -68,7 +68,7 @@ export default {
     if (pathParts[0] === "api" && pathParts[1] === "entries" && pathParts[3] === "keywords") {
       const entryId = pathParts[2];
       const { data, error } = await supabase
-        .from('EntryKeywords')
+        .from('entrykeywords')
         .select('keyword_id, Keywords!inner(keyword, label_en, label_es)')
         .eq('entry_id', entryId);
 
